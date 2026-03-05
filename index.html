@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucas da Silva Alves | Portfólio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="perfil">
+        <div class="foto"></div>
+        <div>
+            <h2>Lucas da Silva Alves</h2>
+            <p>Futuro Desenvolvedor Full Stack</p>
+            <p>luccaslukadev@gmail.com</p>
+        </div>
+    </div>
+
+    <div class="intro">
+        <h1>Bem-vindo ao meu Portfólio Acadêmico</h1>
+        <p>Desenvolvimento de Software Multiplataforma | HTML | CSS | JavaScript | Android</p>
+    </div>
+</header>
+
+<main class="container">
+
+    <aside class="sidebar">
+        <button onclick="mudarConteudo(event,'apresentacao')" class="ativo">Apresentação</button>
+        <button onclick="mudarConteudo(event,'formacao')">Formação Acadêmica</button>
+        <button onclick="mudarConteudo(event,'cursos')">Cursos e Certificações</button>
+        <button onclick="mudarConteudo(event,'projetos')">Projetos Desenvolvidos</button>
+        <button onclick="mudarConteudo(event,'competencias')">Competências</button>
+        <button onclick="mudarConteudo(event,'links')">Links Profissionais</button>
+    </aside>
+
+    <section class="conteudo" id="conteudo">
+        <h2>Apresentação</h2>
+        <p>Sou estudante da FATEC em Desenvolvimento de Software Multiplataforma.</p>
+        <p>Busco aplicar minhas habilidades em projetos que gerem impacto real.</p>
+    </section>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
