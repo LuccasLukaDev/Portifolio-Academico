@@ -61,6 +61,7 @@ body {
     padding:  30px 60px 40px 60px;
     gap: 40px;
     align-items: center;
+    height: 75vh;
 }
 
 /* SIDEBAR */
@@ -184,6 +185,25 @@ body {
     box-shadow: inset 0 0 10px rgba(0,0,0,0.2);
 }
 
+/* CERTIFICAÇÕES */
+
+.scroll-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row wrap;
+}
+
+.item-certificado {
+    display: flex;
+    margin: 20px;
+}
+
+.img-certificado {
+    width: 30vw;
+    height: 40vh;
+}
+
 /* LINKS PROFISSIONAIS */
 
 .links-container{
@@ -253,13 +273,88 @@ body {
 
 /* RESPONSIVIDADE */
 
+@media(max-width: 1225px){
+    /* MAIN*/
+    .conteudo {
+        min-width: calc(97vw - 100px);
+        min-height: 300px;
+        max-height: 300px;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .sidebar button {
+        flex: 1 1 45%;
+    }
+
+    /* CERTIFICADOS */
+    .scroll-container {
+        flex-direction: column;
+    }
+
+    .img-certificado {
+        min-width: 50vw;
+        height: 30vh;
+    }
+}
+
+@media(max-width: 1080px){
+    
+    .header {
+        flex-direction: column;
+    }
+    
+    .intro h1 {
+        margin-top: 20px;
+        font-size: 18px;
+        text-align: center;
+    }
+    
+    .intro p {
+        margin-top: 5px;
+        margin-bottom: 15px;
+        font-size: 15px;
+        text-align: center;
+    }
+    
+    .perfil {
+        flex-direction: column;
+    }
+    
+    .container {
+        padding: 0px 60px 40px 60px;
+    }
+    
+    .img-certificado {
+        min-width: 50vw;
+        height: 40vh;
+    }
+    
+}
+
 @media(max-width: 800px){
+
+    .container {
+        gap: 30px;
+    }
 
     .conteudo.formacoes-layout {
         display: flex;
         align-items: flex-start;
         justify-content: center;
-        padding: 0px 10px 0px 10px
+        padding: 0px 10px 0px 10px;
+        min-width: calc(100vw - 100px);
+        min-height: 250px;
+        max-height: 300px;
+        margin-bottom: 200px;
     }
 
     .card-formacoes h4, 
@@ -279,55 +374,9 @@ body {
     .linguagens h4 {
         font-size: 11.5px;
     }
-}
 
-@media(max-width: 1080px){
-
-    .header {
-        flex-direction: column;
-    }
-
-    .intro h1 {
-        margin-top: 20px;
-        font-size: 18px;
-        text-align: center;
-    }
-
-    .intro p {
-        margin-top: 5px;
-        font-size: 15px;
-        text-align: center;
-    }
-
-    .perfil {
-        flex-direction: column;
-    }
-
-    .container {
-        padding: 0px 60px 40px 60px;
-    }
-
-}
-
-@media(max-width: 1225px){
-
-    .conteudo {
-        min-width: calc(97vw - 100px);
-        min-height: fit-content;
-        max-height: fit-content;
-    }
-
-    .container {
-        flex-direction: column;
-    }
-
-    .sidebar {
-        width: 100%;
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-
-    .sidebar button {
-        flex: 1 1 45%;
+    .img-certificado {
+        min-width: 50vw;
+        height: 40vh;
     }
 }
