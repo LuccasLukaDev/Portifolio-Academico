@@ -19,6 +19,12 @@ body {
     align-items: center;
     padding:  40px 60px 0px 60px;
     backdrop-filter: blur(15px);
+    background: url(../img/header-img.jpg), 
+                linear-gradient(135deg, rgba(15,23,42,0.85), rgba(30,41,59,0.9));
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-bottom: 20px;
 }
 
 .perfil {
@@ -32,7 +38,7 @@ body {
     height: 110px;
     border-radius: 50%;
     background: linear-gradient(135deg, #38bdf8, #6366f1);
-    box-shadow: 1px 1px 15px 10px lightblue;
+    box-shadow: 0px 0px 15px 1px white;
 }
 
 .perfil h2 {
@@ -61,7 +67,6 @@ body {
     padding:  30px 60px 40px 60px;
     gap: 40px;
     align-items: center;
-    height: 75vh;
 }
 
 /* SIDEBAR */
@@ -101,9 +106,9 @@ body {
     border-radius: 5px;
     background: rgba(255,255,255,0.05);
     backdrop-filter: blur(20px);
-    max-width: calc(80vw - 100px);
-    min-height: 430px;
-    max-height: 430px;
+    width: 100%;
+    height: 100vh;
+    max-height: 450px;
     transition: all 0.35s ease;
     opacity: 1;
     transform: translateY(0);
@@ -126,14 +131,15 @@ body {
     font-size: 20px;
 }
 
+
+/* FORMAÇÕES ACADÊMICAS E LINGUAS*/
+
 .conteudo.formacoes-layout {
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    padding: 0px 30px 0px 30px
+    padding: 0px 10px 0px 10px
 }
-
-/* FORMAÇÕES ACADÊMICAS E LINGUAS*/
 
 .card-formacoes{
     display: flex;
@@ -185,23 +191,43 @@ body {
     box-shadow: inset 0 0 10px rgba(0,0,0,0.2);
 }
 
-/* CERTIFICAÇÕES */
+/* CERTIFICADOS */
 
-.scroll-container {
+.container-certificado {
     display: flex;
-    align-items: center;
+    align-items: stretch;
     justify-content: center;
     flex-flow: row wrap;
+    gap: 10px;
 }
 
 .item-certificado {
-    display: flex;
-    margin: 20px;
+    flex: 1 1 350px;
+    height: auto;
+}
+
+.item-certificado a,
+.item-certificado a:hover,
+.item-certificado a:visited,
+.item-certificado a:active {
+    color: white;
+    text-decoration: none;
 }
 
 .img-certificado {
-    width: 30vw;
-    height: 40vh;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: white solid 1px;
+    padding: 5px;
+    transition: transform 0.5s ease, 
+                box-shadow 0.3s ease;
+}
+
+.img-certificado:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0px 0px 10px 5px;
 }
 
 /* LINKS PROFISSIONAIS */
@@ -274,15 +300,20 @@ body {
 /* RESPONSIVIDADE */
 
 @media(max-width: 1225px){
-    /* MAIN*/
-    .conteudo {
-        min-width: calc(97vw - 100px);
-        min-height: 300px;
-        max-height: 300px;
+    /* MAIN */
+
+    .header {
+        margin-bottom: 20px;
     }
 
     .container {
         flex-direction: column;
+        padding: 0px 60px 0px 60px;
+        gap: 20px;
+    }
+    
+    .conteudo {
+        flex-direction: row;
     }
 
     .sidebar {
@@ -296,21 +327,18 @@ body {
     }
 
     /* CERTIFICADOS */
-    .scroll-container {
-        flex-direction: column;
-    }
 
-    .img-certificado {
-        min-width: 50vw;
-        height: 30vh;
-    }
+    
 }
 
 @media(max-width: 1080px){
     
     .header {
         flex-direction: column;
-    }
+        background: none;
+        border-bottom: white solid 1px;
+        margin: 10px 10px;
+    }   
     
     .intro h1 {
         margin-top: 20px;
@@ -330,12 +358,8 @@ body {
     }
     
     .container {
-        padding: 0px 60px 40px 60px;
-    }
-    
-    .img-certificado {
-        min-width: 50vw;
-        height: 40vh;
+        padding: 0px 20px 40px 20px;
+        gap: 15px;
     }
     
 }
@@ -343,18 +367,12 @@ body {
 @media(max-width: 800px){
 
     .container {
-        gap: 30px;
+        gap: 15px;
+        padding-bottom: 20px;
     }
 
-    .conteudo.formacoes-layout {
-        display: flex;
-        align-items: flex-start;
-        justify-content: center;
-        padding: 0px 10px 0px 10px;
-        min-width: calc(100vw - 100px);
-        min-height: 250px;
-        max-height: 300px;
-        margin-bottom: 200px;
+    .conteudo {
+        padding: 10px 10px;
     }
 
     .card-formacoes h4, 
@@ -375,8 +393,4 @@ body {
         font-size: 11.5px;
     }
 
-    .img-certificado {
-        min-width: 50vw;
-        height: 40vh;
-    }
 }

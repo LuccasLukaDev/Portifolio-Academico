@@ -69,9 +69,26 @@ function mudarConteudo(event, secao) {
         if (secao === "cursos") {
             conteudo.innerHTML = `
                 <h2>Cursos e Certificações</h2>
-                <p>Informática - Microcamp</p>
-                <p>Inglês - Microcamp</p>
-                <p>Fundamentos em Tecnologias</p>
+                <div class="container-certificado">
+                    <div class="item-certificado">
+                        <a href="../img/inovadores.png" target="_blank" download>
+                            <img src="../img/inovadores.png" alt="certificado" class="img-certificado">
+                        </a>
+                        <p class="texto-certificado"></p>
+                    </div>
+
+                    <div class="item-certificado">
+                        <img src="../img/pit.png" alt="certificado" class="img-certificado">
+                    </div>
+
+                    <div class="item-certificado">
+                        <img src="../img/noimg.png" alt="certificado" class="img-certificado">
+                    </div>
+
+                    <div class="item-certificado">
+                        <img src="../img/noimg.png" alt="certificado" class="img-certificado">
+                    </div>
+                </div>
             `;
         }
 
