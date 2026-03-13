@@ -75,10 +75,13 @@ Este portfólio foi desenvolvido utilizando tecnologias web modernas:
 ```
 portfolio-academico
 │
-├── index.html
-├── indexAdm.html
-├── style.css
-├── script.js
+├── src
+│   ├── index.html
+│   ├── indexAdm.html
+|   ├── style.css
+│   ├── styleAdm.css
+|   ├── script.js
+│   └── scriptAdm.js
 │
 └── img
 ```
