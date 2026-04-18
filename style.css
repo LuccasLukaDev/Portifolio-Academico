@@ -87,7 +87,7 @@ body {
 
 .container {
     display: flex;
-    padding:  20px 60px 20px 60px;
+    padding:  60px 60px 20px 60px;
     gap: 40px;
     align-items: center;
 }
