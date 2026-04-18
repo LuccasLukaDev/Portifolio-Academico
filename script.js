@@ -85,14 +85,14 @@ function mudarConteudo(event, secao) {
                 <div class="container-certificado">
 
                     <div class="item-certificado">
-                        <a href="../img/inovadores.png" target="_blank">
-                            <img src="../img/inovadores.png" class="img-certificado">
+                        <a href="img/inovadores.png" target="_blank">
+                            <img src="img/inovadores.png" class="img-certificado">
                         </a>
                     </div>
 
                     <div class="item-certificado">
-                        <a href="../img/pit.png" target="_blank">
-                            <img src="../img/pit.png" class="img-certificado">
+                        <a href="img/pit.png" target="_blank">
+                            <img src="img/pit.png" class="img-certificado">
                         </a>
                     </div>
 
@@ -109,7 +109,7 @@ function mudarConteudo(event, secao) {
             <div class="projetos-container" id="listaProjetos">
 
                 <div class="projeto-card">
-                    <img src="../img/janosys.png" alt="Projeto Tectoy">
+                    <img src="img/janosys.png" alt="Projeto Tectoy">
                     <h3>Dashboard Censo IBGE 2010 x 2022 — SJC</h3>
                     <p> 
                     Aplicação web para visualização e análise dos dados do Censo 2022 x 2010 de São José dos Campos, utilizando 
@@ -120,7 +120,7 @@ function mudarConteudo(event, secao) {
                 </div>
 
                 <div class="projeto-card">
-                    <img src="../img/janosys.png" alt="Projeto Tectoy">
+                    <img src="img/janosys.png" alt="Projeto Tectoy">
                     <h3>Dashboard Censo IBGE 2010 x 2022 — SJC</h3>
                     <p> 
                     Aplicação web para visualização e análise dos dados do Censo 2022 x 2010 de São José dos Campos, utilizando 
