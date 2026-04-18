@@ -294,21 +294,12 @@ function carregarCursos() {
 
   if (!container) return;
 
-  container.innerHTML = "";
+ container.innerHTML = cursos.map(c => `
+  <div class="item-certificado">
+    <img src="${c.imagem}" class="img-certificado" onclick="abrirImagem('${c.imagem}')">
+  </div>
+`).join('');
 
-  cursos.forEach((c) => {
-    const div = document.createElement("div");
-    div.classList.add("item-certificado");
-
-    const img = document.createElement("img");
-    img.src = c.imagem;
-    img.classList.add("img-certificado");
-
-    img.addEventListener("click", () => abrirImagem(c.imagem));
-
-    div.appendChild(img);
-    container.appendChild(div);
-  });
 }
 
 function abrirImagem(base64) {
