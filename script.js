@@ -1,15 +1,20 @@
 function inicializarDados() {
-
-  if (!localStorage.getItem("projetos")) {
+    if (!localStorage.getItem("projetos")) {
     localStorage.setItem("projetos", JSON.stringify([
-      {
-        nome: "Dashboard IBGE",
-        imagem: "img/janosys.png",
-        descricao: "Aplicação web com gráficos interativos",
-        link: "https://github.com/LuccasLukaDev/Janosys-Project"
-      }
+        {
+            nome: "Dashboard Interativo do Censo IBGE (2010 x 2022)",
+            imagem: "img/janosys.png",
+            descricao: "Aplicação web para visualização comparativa dos dados do Censo IBGE entre 2010 e 2022 em São José dos Campos, com gráficos dinâmicos, filtros por região e análise por faixa etária.",
+            link: "https://github.com/LuccasLukaDev/Janosys-Project"
+        },
+        {
+            nome: "Sistema de Gestão de Dados Demográficos",
+            imagem: "img/janosys.png",
+            descricao: "Sistema desenvolvido para organizar, processar e exibir dados demográficos de forma estruturada, permitindo consultas rápidas e geração de insights através de dashboards interativos.",
+            link: "https://github.com/LuccasLukaDev/Janosys-Project"
+        }
     ]));
-  }
+    }
 
   if (!localStorage.getItem("cursos")) {
     localStorage.setItem("cursos", JSON.stringify([
