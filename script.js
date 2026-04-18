@@ -307,6 +307,8 @@ function carregarCursos() {
 
   if (!container) return;
 
+  container.innerHTML = "";
+
   cursos.forEach((c) => {
     const div = document.createElement("div");
     div.classList.add("item-certificado");
