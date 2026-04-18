@@ -121,19 +121,6 @@ function mudarConteudo(event, secao) {
                 <h3>*Clique em um certificado para visualizar em outra aba*</h3>
 
                 <div class="container-certificado">
-
-                    <div class="item-certificado">
-                        <a href="img/inovadores.png" target="_blank">
-                            <img src="img/inovadores.png" class="img-certificado">
-                        </a>
-                    </div>
-
-                    <div class="item-certificado">
-                        <a href="img/pit.png" target="_blank">
-                            <img src="img/pit.png" class="img-certificado">
-                        </a>
-                    </div>
-
                 </div>
             `;
 
