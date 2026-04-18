@@ -321,28 +321,24 @@ function abrirImagem(base64) {
 
 function carregarProjetos() {
   const projetos = JSON.parse(localStorage.getItem("projetos")) || [];
-
   const container = document.getElementById("listaProjetos");
 
   if (!container) return;
 
-  projetos.forEach((p) => {
-    container.innerHTML += `
-      <div class="projeto-card">
+  container.innerHTML = projetos.map(p => `
+    <div class="projeto-card">
+      <img src="${p.imagem}">
 
-        <img src="${p.imagem}">
+      <h3>${p.nome}</h3>
 
-        <h3>${p.nome}</h3>
+      <p>${p.descricao}</p>
 
-        <p>${p.descricao}</p>
+      <button class="btn-projeto" onclick="abrirProjeto('${p.link}')">
+        <i class="fa-brands fa-github"></i> Ver Repositório
+      </button>
 
-        <button class="btn-projeto" onclick="abrirProjeto('${p.link}')">
-          <i class="fa-brands fa-github"></i> Ver Repositório
-        </button>
-
-      </div>
-    `;
-  });
+    </div>
+  `).join('');
 }
 
 function abrirProjeto(link){
