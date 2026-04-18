@@ -1,3 +1,41 @@
+function inicializarDados() {
+
+  if (!localStorage.getItem("projetos")) {
+    localStorage.setItem("projetos", JSON.stringify([
+      {
+        nome: "Dashboard IBGE",
+        imagem: "img/janosys.png",
+        descricao: "Aplicação web com gráficos interativos",
+        link: "https://github.com/LuccasLukaDev/Janosys-Project"
+      }
+    ]));
+  }
+
+  if (!localStorage.getItem("cursos")) {
+    localStorage.setItem("cursos", JSON.stringify([
+      {
+        imagem: "img/inovadores.png"
+      },
+      {
+        imagem: "img/pit.png"
+      }
+    ]));
+  }
+
+  if (!localStorage.getItem("formacoes")) {
+    localStorage.setItem("formacoes", JSON.stringify([]));
+  }
+
+  if (!localStorage.getItem("competencias")) {
+    localStorage.setItem("competencias", JSON.stringify([]));
+  }
+
+  if (!localStorage.getItem("links")) {
+    localStorage.setItem("links", JSON.stringify([]));
+  }
+
+}
+
 function mudarConteudo(event, secao) {
   document
     .querySelectorAll(".sidebar button")
@@ -378,4 +416,7 @@ function acessarAdmin(){
 
 }
 
-window.onload = carregarFormacoes;
+window.onload = () => {
+  inicializarDados();
+  carregarFormacoes();
+};
