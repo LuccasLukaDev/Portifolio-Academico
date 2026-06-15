@@ -1,189 +1,176 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Painel Administrativo</title>
-
     <link rel="stylesheet" href="styleAdm.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-
 <body>
 
-    <div class="form-container">
+<div class="bg-orbs">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+</div>
 
-        <h1>Painel Administrativo</h1>
+<div class="page-wrapper">
+
+    <div class="adm-header">
+        <div>
+            <p class="adm-eyebrow">Portfólio · Acesso restrito</p>
+            <h1>Painel Administrativo</h1>
+        </div>
         <button class="btn-voltar" onclick="voltarIndex()">
             <i class="fa-solid fa-arrow-left"></i>
+            <span>Voltar</span>
         </button>
+    </div>
+
+    <div class="paineis-grid">
 
         <!-- FORMAÇÃO -->
-
         <div class="painel">
-
-            <h2>Adicionar Formação</h2>
-
+            <div class="painel-header">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <h2>Adicionar Formação</h2>
+            </div>
             <form id="formFormacao">
-
                 <div class="form-group">
                     <label>Instituição</label>
-                    <input type="text" id="instituicao" required>
+                    <input type="text" id="instituicao" placeholder="Ex: FATEC São José dos Campos" required>
                 </div>
-
                 <div class="form-group">
                     <label>Nível</label>
-                    <input type="text" id="nivel" required>
+                    <input type="text" id="nivel" placeholder="Ex: Superior, Técnico" required>
                 </div>
-
                 <div class="form-group">
                     <label>Curso</label>
-                    <input type="text" id="curso" required>
+                    <input type="text" id="curso" placeholder="Nome do curso" required>
                 </div>
-
-                <div class="form-group">
-                    <label>Ano Início</label>
-                    <input type="number" id="inicio" required>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Ano de Início</label>
+                        <input type="number" id="inicio" placeholder="2024" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Ano Final</label>
+                        <input type="number" id="fim" placeholder="2027">
+                    </div>
                 </div>
-
-                <div class="form-group">
-                    <label>Ano Final</label>
-                    <input type="number" id="fim">
-                </div>
-
                 <div class="checkbox-group">
                     <input type="checkbox" id="atual">
-                    <label>Atualmente cursando</label>
+                    <label for="atual">Atualmente cursando</label>
                 </div>
-
-                <div class="botoes">
-                    <button class="salvar" type="submit">Salvar</button>
-                </div>
-
+                <button class="btn-salvar" type="submit">
+                    <i class="fa-solid fa-floppy-disk"></i> Salvar Formação
+                </button>
             </form>
-
         </div>
 
-
-        <!-- CURSOS -->
-
+        <!-- CERTIFICADOS -->
         <div class="painel">
-
-            <h2>Adicionar Certificado</h2>
-
+            <div class="painel-header">
+                <i class="fa-solid fa-certificate"></i>
+                <h2>Adicionar Certificado</h2>
+            </div>
             <form id="formCurso">
-
                 <div class="form-group">
-                    <label>Imagem</label>
-                    <input type="file" id="imagem" required>
+                    <label>Imagem do Certificado</label>
+                    <div class="file-drop" id="dropCurso">
+                        <i class="fa-solid fa-cloud-arrow-up"></i>
+                        <span>Clique para selecionar ou arraste aqui</span>
+                        <input type="file" id="imagem" accept="image/*" required>
+                    </div>
+                    <p class="file-name" id="nomeCurso"></p>
                 </div>
-
-                <div class="botoes">
-                    <button class="salvar" type="submit">Salvar</button>
-                </div>
-
+                <button class="btn-salvar" type="submit">
+                    <i class="fa-solid fa-floppy-disk"></i> Salvar Certificado
+                </button>
             </form>
-
         </div>
-
 
         <!-- PROJETOS -->
-
         <div class="painel">
-
-            <h2>Adicionar Projeto</h2>
-
+            <div class="painel-header">
+                <i class="fa-solid fa-code-branch"></i>
+                <h2>Adicionar Projeto</h2>
+            </div>
             <form id="formProjeto">
-
                 <div class="form-group">
                     <label>Imagem do Projeto</label>
-                    <input type="file" id="imagemProjeto" required>
+                    <div class="file-drop" id="dropProjeto">
+                        <i class="fa-solid fa-cloud-arrow-up"></i>
+                        <span>Clique para selecionar ou arraste aqui</span>
+                        <input type="file" id="imagemProjeto" accept="image/*" required>
+                    </div>
+                    <p class="file-name" id="nomeProjeto-file"></p>
                 </div>
-
                 <div class="form-group">
-                    <label>Nome</label>
-                    <input type="text" id="nomeProjeto" required>
+                    <label>Nome do Projeto</label>
+                    <input type="text" id="nomeProjeto" placeholder="Nome do projeto" required>
                 </div>
-
                 <div class="form-group">
                     <label>Descrição</label>
-                    <input type="text" id="descricaoProjeto" required>
+                    <textarea id="descricaoProjeto" placeholder="Descreva o projeto brevemente..." rows="3" required></textarea>
                 </div>
-
                 <div class="form-group">
                     <label>Link do Repositório</label>
-                    <input type="url" id="linkProjeto" required>
+                    <input type="url" id="linkProjeto" placeholder="https://github.com/..." required>
                 </div>
-
-                <div class="botoes">
-                    <button class="salvar" type="submit">Salvar</button>
-                </div>
-
+                <button class="btn-salvar" type="submit">
+                    <i class="fa-solid fa-floppy-disk"></i> Salvar Projeto
+                </button>
             </form>
-
         </div>
-
 
         <!-- COMPETÊNCIAS -->
-
         <div class="painel">
-
-            <h2>Adicionar Competência</h2>
-
+            <div class="painel-header">
+                <i class="fa-solid fa-microchip"></i>
+                <h2>Adicionar Competência</h2>
+            </div>
             <form id="formCompetencia">
-
                 <div class="form-group">
-                    <label>Competência</label>
-                    <input type="text" id="nomeCompetencia" required>
+                    <label>Nome da Competência</label>
+                    <input type="text" id="nomeCompetencia" placeholder="Ex: TypeScript, Docker..." required>
                 </div>
-
-                <div class="botoes">
-                    <button class="salvar" type="submit">Salvar</button>
-                </div>
-
+                <button class="btn-salvar" type="submit">
+                    <i class="fa-solid fa-floppy-disk"></i> Salvar Competência
+                </button>
             </form>
-
         </div>
 
-
         <!-- LINKS -->
-
         <div class="painel">
-
-            <h2>Adicionar Link</h2>
-
+            <div class="painel-header">
+                <i class="fa-solid fa-link"></i>
+                <h2>Adicionar Link</h2>
+            </div>
             <form id="formLink">
-
                 <div class="form-group">
                     <label>Nome</label>
-                    <input type="text" id="nomeLink" required>
+                    <input type="text" id="nomeLink" placeholder="Ex: LinkedIn" required>
                 </div>
-
                 <div class="form-group">
                     <label>Descrição</label>
-                    <input type="text" id="descricaoLink" required>
+                    <input type="text" id="descricaoLink" placeholder="Ex: Perfil profissional" required>
                 </div>
-
                 <div class="form-group">
                     <label>URL</label>
-                    <input type="url" id="urlLink" required>
+                    <input type="url" id="urlLink" placeholder="https://..." required>
                 </div>
-
-                <div class="botoes">
-                    <button class="salvar" type="submit">Salvar</button>
-                </div>
-
+                <button class="btn-salvar" type="submit">
+                    <i class="fa-solid fa-floppy-disk"></i> Salvar Link
+                </button>
             </form>
-
         </div>
 
     </div>
+</div>
 
-    <script src="scriptAdm.js"></script>
-
+<script src="scriptAdm.js"></script>
 </body>
-
 </html>

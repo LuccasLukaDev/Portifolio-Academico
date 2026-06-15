@@ -5,65 +5,97 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lucas da Silva Alves | Portfólio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
-<header class="header">
-    <div class="perfil">
-        <img class="foto" src="img/img_perfil.jpeg"></img>
-        <div>
-            <h2>Lucas da Silva Alves</h2>
-            <p>Futuro Desenvolvedor Full Stack</p>
-            <p><i class="fa-solid fa-envelope"></i> luccaslukadev@gmail.com</p>
-            <p><i class="fa-brands fa-whatsapp"></i> (12) 99767-3470</p>
-        </div>
-        <button class="btn-admin" onclick="acessarAdmin()">
-            <i class="fa-solid fa-unlock"></i><button class="btn-admin" onclick="acessarAdmin()">
-    <i class="fa-solid fa-lock"></i>
-</button>
-        </button>
-    </div>
+<div class="bg-orbs">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+</div>
 
-    <div class="intro">
-        <h1>Bem-vindo ao meu Portfólio Acadêmico</h1>
-        <p>Desenvolvimento de Software Multiplataforma | HTML | CSS | JavaScript | TypeScript | MySql</p>
+<header class="header">
+    <div class="header-inner">
+        <div class="perfil">
+            <div class="foto-wrapper">
+                <img class="foto" src="img/img_perfil.jpeg" alt="Lucas da Silva Alves">
+                <div class="foto-ring"></div>
+            </div>
+            <div class="perfil-info">
+                <h2>Lucas da Silva Alves</h2>
+                <p class="perfil-titulo">Desenvolvedor Full Stack</p>
+                <div class="perfil-contatos">
+                    <a href="mailto:luccaslukadev@gmail.com"><i class="fa-solid fa-envelope"></i> luccaslukadev@gmail.com</a>
+                    <a href="tel:+5512997673470"><i class="fa-brands fa-whatsapp"></i> (12) 99767-3470</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="intro">
+            <p class="intro-eyebrow">Portfólio Acadêmico</p>
+            <h1>Bem-vindo ao<br><span class="gradient-text">meu espaço</span></h1>
+            <p class="intro-sub">DSM · HTML · CSS · JavaScript · TypeScript · MySQL</p>
+        </div>
+
+        <button class="btn-admin" onclick="acessarAdmin()" title="Acesso administrativo">
+            <i class="fa-solid fa-lock"></i>
+        </button>
     </div>
 </header>
 
 <main class="container">
 
     <aside class="sidebar">
-        <button onclick="mudarConteudo(event,'apresentacao')" class="ativo">Apresentação</button>
-        <button onclick="mudarConteudo(event,'formacao')">Formação Acadêmica</button>
-        <button onclick="mudarConteudo(event,'cursos')">Cursos e Certificações</button>
-        <button onclick="mudarConteudo(event,'projetos')">Projetos Desenvolvidos</button>
-        <button onclick="mudarConteudo(event,'competencias')">Competências</button>
-        <button onclick="mudarConteudo(event,'links')">Links Profissionais</button>
+        <nav>
+            <button onclick="mudarConteudo(event,'apresentacao')" class="ativo">
+                <i class="fa-solid fa-user"></i>
+                <span>Apresentação</span>
+            </button>
+            <button onclick="mudarConteudo(event,'formacao')">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <span>Formação</span>
+            </button>
+            <button onclick="mudarConteudo(event,'cursos')">
+                <i class="fa-solid fa-certificate"></i>
+                <span>Certificações</span>
+            </button>
+            <button onclick="mudarConteudo(event,'projetos')">
+                <i class="fa-solid fa-code-branch"></i>
+                <span>Projetos</span>
+            </button>
+            <button onclick="mudarConteudo(event,'competencias')">
+                <i class="fa-solid fa-microchip"></i>
+                <span>Competências</span>
+            </button>
+            <button onclick="mudarConteudo(event,'links')">
+                <i class="fa-solid fa-link"></i>
+                <span>Links</span>
+            </button>
+        </nav>
     </aside>
 
     <section class="conteudo" id="conteudo">
-                <h2>Apresentação</h2>
-                <p>
-                    👋 Olá! Sou <strong>Lucas da Silva Alves</strong>, Desenvolvedor Full Stack 💻 
-                    com experiência em desenvolvimento <strong>Android 📱</strong>, sistemas e 
-                    tecnologias como <strong>Java ☕</strong>, <strong>Python 🐍</strong>, 
-                    <strong>HTML 🌐</strong>, <strong>CSS 🎨</strong> e 
-                    <strong>JavaScript ⚡</strong>, entre outras.
-
-                    <br><br>
-
-                    🚀 Busco criar soluções eficientes e inovadoras, aprendendo constantemente 
-                    e entregando projetos de qualidade.
-
-                    <br><br>
-
-                    🌍 Falo <strong>Português 🇧🇷</strong> e <strong>Inglês 🇺🇸</strong> fluentemente 
-                    e estou sempre aberto a novos desafios e oportunidades na área de tecnologia.
-                </p>
+        <h2>Apresentação</h2>
+        <p>
+            👋 Olá! Sou <strong>Lucas da Silva Alves</strong>, Desenvolvedor Full Stack 💻
+            com experiência em desenvolvimento <strong>Android 📱</strong>, sistemas e
+            tecnologias como <strong>Java ☕</strong>, <strong>Python 🐍</strong>,
+            <strong>HTML 🌐</strong>, <strong>CSS 🎨</strong> e
+            <strong>JavaScript ⚡</strong>, entre outras.
+            <br><br>
+            🚀 Busco criar soluções eficientes e inovadoras, aprendendo constantemente
+            e entregando projetos de qualidade.
+            <br><br>
+            🌍 Falo <strong>Português 🇧🇷</strong> e <strong>Inglês 🇺🇸</strong> fluentemente
+            e estou sempre aberto a novos desafios e oportunidades na área de tecnologia.
+        </p>
     </section>
 
 </main>
+
 <script src="script.js"></script>
 </body>
 </html>
